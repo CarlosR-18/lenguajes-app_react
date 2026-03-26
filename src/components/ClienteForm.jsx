@@ -3,6 +3,7 @@ import { createCliente, updateCliente } from '../api/clientes';
 
 const clienteInicial = {
   nombre: '',
+  apellido: '',
   correo: '',
   telefono: '',
 };
@@ -16,6 +17,7 @@ function ClienteForm({ clienteSeleccionado, onSuccess, onCancel }) {
     if (clienteSeleccionado) {
       setForm({
         nombre: clienteSeleccionado.nombre ?? '',
+        apellido: clienteSeleccionado.apellido ?? '',
         correo: clienteSeleccionado.correo ?? '',
         telefono: clienteSeleccionado.telefono ?? '',
       });
@@ -59,6 +61,17 @@ function ClienteForm({ clienteSeleccionado, onSuccess, onCancel }) {
             <input
               name="nombre"
               value={form.nombre}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Apellido:
+            <input
+              name="apellido"
+              value={form.apellido}
               onChange={handleChange}
               required
             />

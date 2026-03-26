@@ -46,7 +46,7 @@ function ClientesList({ onEdit }) {
           <thead>
             <tr>
               <th>Id</th>
-              <th>Nombre</th>
+              <th>Nombre completo</th>
               <th>Correo</th>
               <th>Teléfono</th>
               <th>Acciones</th>
@@ -56,7 +56,7 @@ function ClientesList({ onEdit }) {
             {clientes.map((c) => (
               <tr key={c.id}>
                 <td>{c.id}</td>
-                <td>{c.nombre}</td>
+                <td>{c.nombre} {c.apellido}</td>
                 <td>{c.correo}</td>
                 <td>{c.telefono}</td>
                 <td>
