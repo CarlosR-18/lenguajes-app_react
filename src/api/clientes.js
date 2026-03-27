@@ -40,4 +40,5 @@ export async function deleteCliente(id) {
     throw new Error('Error al eliminar cliente');
   }
   return response.json();
+  
 }
